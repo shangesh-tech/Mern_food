@@ -26,15 +26,19 @@ const Header = () => {
     }
   };
 
-  const user = async () => {
+const user = async () => {
   try {
-    const response = await axios.get("/api/v1/me", { withCredentials: true });
+    const response = await axios.get(
+      "https://mern-food-bl34.onrender.com/api/v1/me", 
+      { withCredentials: true } 
+    );
     console.log("user32=>", response.data);
     return response.data;
   } catch (error) {
     console.log(error);
   }
 };
+
 
 
   const isAuth_ = async () => {
