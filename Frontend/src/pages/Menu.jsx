@@ -24,7 +24,7 @@ const Menu = () => {
           keyword: searchKeyword,
           category: selectedCategory === "All" ? "" : selectedCategory,
         },
-      });
+      },{ withCredentials: true } );
       console.log(data)
       setProducts(data.products);
       setFilteredProductsCount(data.filteredProductsCount);
