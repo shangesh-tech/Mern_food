@@ -15,9 +15,9 @@ export const getOrders = createAsyncThunk(
   'orders/getOrders',
   async (timeframe, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${BASE_URL}/admin/orders`, {
+      const response = await axios.get(`${BASE_URL}/admin/orders`,{ withCredentials: true }, {
         params: { timeframe }, // Pass timeframe as a query param if applicable
-      },{ withCredentials: true } );
+      } );
       return response.data;
     } catch (error) {
       return rejectWithValue({ error: 'No Orders Found' });
