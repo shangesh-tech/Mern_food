@@ -17,7 +17,7 @@ export const getOrders = createAsyncThunk(
     try {
       const response = await axios.get(`${BASE_URL}/admin/orders`, {
         params: { timeframe }, // Pass timeframe as a query param if applicable
-      });
+      },{ withCredentials: true } );
       return response.data;
     } catch (error) {
       return rejectWithValue({ error: 'No Orders Found' });
@@ -30,7 +30,7 @@ export const addOrder = createAsyncThunk(
   'orders/addOrder',
   async (order, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${BASE_URL}/admin/order/new`, order);
+      const response = await axios.post(`${BASE_URL}/admin/order/new`, order,{ withCredentials: true } );
       return response.data;
     } catch (error) {
       return rejectWithValue({ error: 'Order Not Added' });
@@ -43,7 +43,7 @@ export const updateOrder = createAsyncThunk(
   'orders/updateOrder',
   async (order, { rejectWithValue }) => {
     try {
-      const response = await axios.put(`${BASE_URL}/admin/order/${order._id}`, order);
+      const response = await axios.put(`${BASE_URL}/admin/order/${order._id}`, order,{ withCredentials: true } );
       return response.data;
     } catch (error) {
       return rejectWithValue({ error: 'Order Not Updated' });
