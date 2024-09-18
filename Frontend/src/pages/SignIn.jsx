@@ -12,7 +12,7 @@ const navigate = useNavigate();
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await axios.post("/api/v1/login", {
+    const response = await axios.post("https://mern-food-bl34.onrender.com/api/v1/login", {
       email,
       password,
     });
