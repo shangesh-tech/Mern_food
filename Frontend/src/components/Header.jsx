@@ -100,7 +100,7 @@ const user = async () => {
               id="avatarButton"
               type="button"
               onClick={toggleDropdown}
-              className="w-5 h-5 lg:w-10 lg:h-10 rounded-full cursor-pointer"
+              className="w-10 h-10 rounded-full cursor-pointer"
               src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png"
               alt="User dropdown"
             />
