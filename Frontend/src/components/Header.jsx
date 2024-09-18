@@ -60,11 +60,11 @@ const Header = () => {
     <header className="flex justify-between items-center p-4 border-b bg-gray-50 px-10 ">
       <Link to={"/"} className="flex items-center text-3xl text-orange-600">
         <IoFastFoodOutline />
-        <span className="font-mono text-xl font-semibold">Foodies</span>
+        <span className="font-mono text-xl font-semibold">Food</span>
       </Link>
       <div className="flex items-center space-x-4">
         <span className="text-red-500 text-lg font-mono font-semibold">
-          <span className="text-red-600">Hello1</span>,{userName}👋👋
+          <span className="text-red-600">Hello</span>,{userName}👋👋
         </span>
       </div>
       <div className="flex justify-center items-center gap-4 font-mono">
