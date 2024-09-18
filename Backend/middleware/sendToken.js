@@ -7,12 +7,15 @@ const sendToken = (user, statusCode, res) => {
   });
 
   // Options for cookie
-  const cookieOptions = {
-    expires: new Date(
-      Date.now() + 7 * 24 * 60 * 60 * 1000 // 7days
-    ),
-    httpOnly: true,
-  };
+ const cookieOptions = {
+  expires: new Date(
+    Date.now() + 7 * 24 * 60 * 60 * 1000 // 7 days
+  ),
+  httpOnly: true, // more secure, server-side only
+  sameSite: 'None', // allows cross-origin cookies
+  secure: true, // ensures cookies are sent over HTTPS
+};
+
 
   // Send token in cookie
   res.cookie('token', token, cookieOptions);
