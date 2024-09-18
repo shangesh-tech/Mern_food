@@ -63,7 +63,7 @@ const Header = () => {
       </Link>
       <div className="flex items-center space-x-4">
         <span className="text-red-500 text-lg font-mono font-semibold">
-          <span className="text-red-600">Hello</span>,{userName}👋👋
+          <span className="text-red-600">Hello1</span>,{userName}👋👋
         </span>
       </div>
       <div className="flex justify-center items-center gap-4 font-mono">
