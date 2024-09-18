@@ -1,12 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://mern-food-bl34.onrender.com', 
+      '/api': {
+        target: 'https://mern-food-bl34.onrender.com',
+        changeOrigin: true, // This ensures the origin of the request matches the target
+        secure: true, // Set to true if you're using HTTPS on the backend
+        rewrite: (path) => path.replace(/^\/api/, ''), // Removes '/api' from the path
+      },
     },
   },
-})
+});
