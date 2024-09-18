@@ -10,7 +10,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://mern-food-bl34.onrender.com/api/forgotpassword', { email });
+      const response = await axios.post('https://mern-food-bl34.onrender.com/api/forgotpassword', { email },{ withCredentials: true } );
       console.log(response.data)
       setSuccess(true);
       setError(null);
