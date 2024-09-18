@@ -41,7 +41,7 @@ const CheckoutForm = ({
 
     try {
       // Create Payment Intent on the backend
-      const response = await axios.post("/api/create-payment-intent", {
+      const response = await axios.post("https://mern-food-bl34.onrender.com/api/create-payment-intent", {
         amount: totalAmount,
         orderItems: cartItems,
         shippingInfo: shippingInfo,
@@ -179,7 +179,7 @@ const Cart = () => {
   // Check if user is authenticated
   const checkAuth = async () => {
     try {
-      const response = await axios.get("/api/v1/check-auth");
+      const response = await axios.get("https://mern-food-bl34.onrender.com/api/v1/check-auth");
       return response.data.success;
     } catch (error) {
       navigate("/signin");
