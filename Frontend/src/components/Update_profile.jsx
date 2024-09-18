@@ -18,7 +18,7 @@ export const SpringModal = ({ isOpen, setIsOpen, userData, setUserData }) => {
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.put("/api/v1/updateprofile", formData);
+      const response = await axios.put("https://mern-food-bl34.onrender.com/api/v1/updateprofile", formData);
       if (response.status === 200) {
         setUserData(response.data); // Update local user data
         setIsOpen(false); // Close modal
