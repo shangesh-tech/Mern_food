@@ -22,7 +22,7 @@ const Orders = () => {
   const handleStatusChange = async (orderId, status) => {
     try {
       console.log(status)
-      const response = await axios.put(`https://mern-food-bl34.onrender.com/api/v1/admin/order/${orderId}`,status,{ withCredentials: true });
+      const response = await axios.put(`https://mern-food-bl34.onrender.com/api/v1/admin/order/${orderId}`,{status},{ withCredentials: true });
       console.log(response.data)
       fetchOrders(); 
     } catch (error) {
