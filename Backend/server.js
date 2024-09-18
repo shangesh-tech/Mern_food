@@ -14,7 +14,7 @@ const app = express();
 app.use(cookieParser());
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://mern-food-frontend-6ywd.onrender.com',
   credentials: true,
 }));
 app.use(express.json());
