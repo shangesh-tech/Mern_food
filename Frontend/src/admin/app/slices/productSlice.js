@@ -13,7 +13,7 @@ export const getProducts = createAsyncThunk(
   "products/getProducts",
   async (keyword, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${BASE_URL}/admin/products`);
+      const response = await axios.get(`${BASE_URL}/admin/products`,{ withCredentials: true } );
       return response.data;
     } catch (error) {
       return rejectWithValue({ error: "No Products Found" });
@@ -26,7 +26,7 @@ export const addProduct = createAsyncThunk(
   "products/addProduct",
   async (product, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${BASE_URL}/admin/product/new`, product);
+      const response = await axios.post(`${BASE_URL}/admin/product/new`, product,{ withCredentials: true } );
       return response.data;
     } catch (error) {
       return rejectWithValue({ error: "Product Not Added" });
