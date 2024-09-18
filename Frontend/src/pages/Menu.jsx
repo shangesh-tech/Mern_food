@@ -18,7 +18,7 @@ const Menu = () => {
   // Fetch products from API
   const fetchProducts = async (page = 1) => {
     try {
-      const { data } = await axios.get(`http://localhost:3500/api/v1/products`, {
+      const { data } = await axios.get(`https://mern-food-bl34.onrender.com/api/v1/products`, {
         params: {
           page,
           keyword: searchKeyword,
