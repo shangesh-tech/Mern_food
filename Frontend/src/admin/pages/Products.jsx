@@ -16,7 +16,7 @@ const Product = () => {
   }, [dispatch]);
 
   const handleDelete = async (_id) => {
-    const response = await axios.delete(`https://mern-food-bl34.onrender.com/api/v1/admin/product/${_id}`);
+    const response = await axios.delete(`https://mern-food-bl34.onrender.com/api/v1/admin/product/${_id}`,{ withCredentials: true } );
     console.log(response.data);
     if (response.data.message == "Product Deleted Successfully") {
       dispatch(getProducts());
