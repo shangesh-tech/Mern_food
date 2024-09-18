@@ -10,7 +10,7 @@ const Settings = () => {
   // Fetch user data
   const fetchUser = async () => {
     try {
-      const response = await axios.get("https://mern-food-bl34.onrender.com/api/v1/me");
+      const response = await axios.get("https://mern-food-bl34.onrender.com/api/v1/me",{ withCredentials: true } );
       if (response.data.success) {
         setUserData(response.data.user);
       }
