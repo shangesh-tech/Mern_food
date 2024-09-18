@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
-import axios from "axios"; // Ensure axios is imported
+import axios from "axios";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -16,7 +16,7 @@ const Signup = () => {
     try {
       if (password === confirmPassword) {
         console.log([name, email, password]);
-        const response = await axios.post("/api/v1/register", {
+        const response = await axios.post("https://mern-food-bl34.onrender.com/api/v1/register", {
           name,
           email,
           password,
