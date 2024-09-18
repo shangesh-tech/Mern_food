@@ -9,7 +9,7 @@ const My_order = () => {
   // Fetch orders using Axios
   const fetchOrders = async () => {
     try {
-      const { data } = await axios.get('https://mern-food-bl34.onrender.com/api/v1/orders/me');
+      const { data } = await axios.get('https://mern-food-bl34.onrender.com/api/v1/orders/me',{ withCredentials: true } );
 
       if (data.success) {
         setOrders(data.orders);
