@@ -83,9 +83,9 @@ const Menu = () => {
   }, [searchKeyword, selectedCategory, currentPage]);
 
   return (
-    <div className="p-4 my-10 mx-20">
+    <div className="p-4 my-5 lg:my-10 mx-2 lg:mx-20">
       {/* Search and filter */}
-      <div className="flex justify-center mb-4 mx-48">
+      <div className="flex justify-center mb-4 lg:mx-48">
         <div className="relative w-1/2">
           <input
             type="text"
