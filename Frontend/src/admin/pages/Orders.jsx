@@ -21,7 +21,7 @@ const Orders = () => {
   // Handle order status change
   const handleStatusChange = async (orderId, newStatus) => {
     try {
-      await axios.put(`/api/v1/admin/order/${orderId}`, { status: newStatus });
+      await axios.put(`/api/v1/admin/order/${orderId}`, { status: newStatus },{ withCredentials: true } );
       fetchOrders(); 
     } catch (error) {
       console.error("Error updating order status", error);
