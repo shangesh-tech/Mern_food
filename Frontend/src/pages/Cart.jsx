@@ -246,8 +246,8 @@ const Cart = () => {
   }, []);
 
   return (
-    <div className="flex justify-center p-10">
-      <div className="w-2/3">
+    <div className="flex flex-col lg:flex-row justify-center p-10">
+      <div className="lg:w-2/3">
         <h1 className="text-2xl font-bold mb-2">Your Shopping Cart</h1>
         <div className="border-b-2 border-red-500 w-24 mb-4"></div>
         {cartItems.length === 0 ? (
@@ -257,9 +257,9 @@ const Cart = () => {
             {cartItems.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center justify-between p-4 bg-gray-100 rounded-lg"
+                 className="flex flex-col lg:flex-row gap-4 lg:gap-0 text-center lg:text-left lg:items-center justify-between p-4 bg-gray-100 rounded-lg "
               >
-                <div className="flex items-center">
+                <div className="flex flex-col lg:flex-row items-center">
                   <img
                     src={item.image_url}
                     alt={item.name}
@@ -299,7 +299,7 @@ const Cart = () => {
           </div>
         )}
       </div>
-      <div className="w-1/3 ml-10">
+<div className="lg:w-1/3 lg:ml-10 mt-10 lg:mt-4">
         <div className="bg-white p-4 rounded-lg shadow-lg">
           <div className="bg-red-500 text-white p-2 rounded-t-lg">
             <h2 className="text-lg font-bold">Price Summary</h2>
