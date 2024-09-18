@@ -29,6 +29,7 @@ const Header = () => {
   const user = async () => {
     try {
       const response = await axios.get("/api/v1/me");
+      console.log("user32=>",response.data)
       return response.data;
     } catch (error) {
       console.log(error);
