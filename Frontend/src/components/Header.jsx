@@ -19,7 +19,7 @@ const Header = () => {
 
   const checkAuth = async () => {
     try {
-      const response = await axios.get("https://mern-food-bl34.onrender.com/api/v1/check-auth");
+      const response = await axios.get("/api/v1/check-auth");
       return response.data.success;
     } catch (error) {
       return false;
