@@ -74,16 +74,16 @@ const user = async () => {
     <span class="text-red-600">Hello</span>,{userName}👋👋</span>
 </div>
 
-      <div className="hidden lg:flex justify-center items-center gap-4 font-mono">
+      <div className="flex justify-center items-center gap-4 font-mono">
         <Link
           to={"/"}
-          className="hover:scale-105 hover:text-orange-600 font-medium hover:underline underline-offset-8"
+          className="hidden lg:block hover:scale-105 hover:text-orange-600 font-medium hover:underline underline-offset-8"
         >
           Home
         </Link>
         <Link
           to={"/menu"}
-          className="hover:scale-105 hover:text-orange-600 font-medium hover:underline underline-offset-8"
+          className="hidden lg:block hover:scale-105 hover:text-orange-600 font-medium hover:underline underline-offset-8"
         >
           Menu
         </Link>
@@ -100,7 +100,7 @@ const user = async () => {
               id="avatarButton"
               type="button"
               onClick={toggleDropdown}
-              className="w-10 h-10 rounded-full cursor-pointer"
+              className="w-5 h-5 lg:w-10 lg:h-10 rounded-full cursor-pointer"
               src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png"
               alt="User dropdown"
             />
