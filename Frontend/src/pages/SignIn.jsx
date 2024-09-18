@@ -12,16 +12,23 @@ const navigate = useNavigate();
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await axios.post("https://mern-food-bl34.onrender.com/api/v1/login", {
-      email,
-      password,
-    });
+    const response = await axios.post(
+      "https://mern-food-bl34.onrender.com/api/v1/login",
+      {
+        email,
+        password,
+      },
+      {
+        withCredentials: true, // This ensures cookies (like JWT) are sent
+      }
+    );
     console.log(response.data);
-    navigate("/");
+    navigate("/"); // Redirect to home after successful login
   } catch (error) {
     setError(error.response?.data?.message || error.message);
   }
 };
+
 
   return (
     <div className="flex h-screen items-center justify-center bg-gray-100 dark:bg-gray-900">
