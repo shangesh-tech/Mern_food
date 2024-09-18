@@ -74,7 +74,7 @@ const user = async () => {
     <span class="text-red-600">Hello</span>,{userName}👋👋</span>
 </div>
 
-      <div className="flex justify-center items-center gap-4 font-mono">
+      <div className="hidden lg:flex justify-center items-center gap-4 font-mono">
         <Link
           to={"/"}
           className="hover:scale-105 hover:text-orange-600 font-medium hover:underline underline-offset-8"
