@@ -45,7 +45,7 @@ const CheckoutForm = ({
         amount: totalAmount,
         orderItems: cartItems,
         shippingInfo: shippingInfo,
-      });
+      },{ withCredentials: true } );
       console.log(response.data)
       if (response.data.message === "Payment successful") {
         alert("Payment successful!");
@@ -179,7 +179,7 @@ const Cart = () => {
   // Check if user is authenticated
   const checkAuth = async () => {
     try {
-      const response = await axios.get("https://mern-food-bl34.onrender.com/api/v1/check-auth");
+      const response = await axios.get("https://mern-food-bl34.onrender.com/api/v1/check-auth",{ withCredentials: true } );
       return response.data.success;
     } catch (error) {
       navigate("/signin");
