@@ -6,7 +6,7 @@ const initialState = {
   isLoading: false,
   error: "",
 };
-const BASE_URL = "/api/v1";
+const BASE_URL = "https://mern-food-bl34.onrender.com/api/v1";
 
 // GET all products
 export const getProducts = createAsyncThunk(
