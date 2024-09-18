@@ -1,1 +1,1 @@
-FUll stack Food applications
+Full stack Food applications
