@@ -13,7 +13,7 @@ const Admin_App = () => {
   const navigate = useNavigate();
   const checkAdminRole = async () => {
     try {
-      const response = await axios.get("/api/v1/check-admin");
+      const response = await axios.get("https://mern-food-bl34.onrender.com/api/v1/check-admin");
       if (!response.data.success || response.data.role != "admin") {
         navigate("/");
       }
@@ -23,7 +23,7 @@ const Admin_App = () => {
   };
   const logout = async () => {
     try {
-      const response = await axios.get("/api/v1/logout");
+      const response = await axios.get("https://mern-food-bl34.onrender.com/api/v1/logout");
       navigate("/signin");
     } catch (error) {
       console.log(error);
