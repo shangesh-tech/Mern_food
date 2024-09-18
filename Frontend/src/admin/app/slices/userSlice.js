@@ -10,7 +10,7 @@ const initialState = {
 
 // Thunks for async actions
 export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
-  const response = await axios.get('https://mern-food-bl34.onrender.com/api/v1/admin/users');
+  const response = await axios.get('https://mern-food-bl34.onrender.com/api/v1/admin/users',{ withCredentials: true } );
   console.log(response.data);
   
   return response.data;
@@ -18,12 +18,12 @@ export const fetchUsers = createAsyncThunk('users/fetchUsers', async () => {
 });
 
 export const deleteUser = createAsyncThunk('users/deleteUser', async (id) => {
-  await axios.delete(`https://mern-food-bl34.onrender.com/api/v1/admin/users/${id}`);
+  await axios.delete(`https://mern-food-bl34.onrender.com/api/v1/admin/users/${id}`,{ withCredentials: true } );
   return id; 
 });
 
 export const updateUser = createAsyncThunk('users/updateUser', async ({ id, updatedUser }) => {
-  const response = await axios.put(`https://mern-food-bl34.onrender.com/api/v1/admin/users/${id}`, updatedUser);
+  const response = await axios.put(`https://mern-food-bl34.onrender.com/api/v1/admin/users/${id}`, updatedUser,{ withCredentials: true } );
   return response.data;
 });
 
