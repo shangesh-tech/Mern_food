@@ -19,7 +19,8 @@ const Header = () => {
 
   const checkAuth = async () => {
     try {
-      const response = await axios.get("/api/v1/check-auth");
+      const response = await axios.get("https://mern-food-bl34.onrender.com/api/v1/check-auth",
+                                      { withCredentials: true } );
       return response.data.success;
     } catch (error) {
       return false;
@@ -50,7 +51,8 @@ const user = async () => {
   };
   const logout = async () => {
     try {
-      const response = await axios.get("/api/v1/logout");
+      const response = await axios.get("https://mern-food-bl34.onrender.com/api/v1/logout",
+                                      { withCredentials: true } );
       navigate("/signin");
     } catch (error) {
       console.log(error);
