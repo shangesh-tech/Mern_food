@@ -21,7 +21,7 @@ const Orders = () => {
   // Handle order status change
   const handleStatusChange = async (orderId, status) => {
     try {
-      console.log(newStatus)
+      console.log(status)
       const response = await axios.put(`/api/v1/admin/order/${orderId}`,status,{ withCredentials: true });
       console.log(response.data)
       fetchOrders(); 
